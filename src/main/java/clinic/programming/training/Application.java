@@ -1,6 +1,19 @@
 package clinic.programming.training;
 
+import java.util.ArrayList;  //interface
+import java.util.List;		// implementation of this interface
+
 public class Application {
+
+
+	public void greet(){
+		List<String> greetings = new ArrayList<>();
+		greetings.add("hello");
+
+		for (String greeting : greetings){
+			System.out.println("Greeting: " + greeting);
+		}
+	}
     
     public Application() {
         System.out.println ("Inside Application");
@@ -10,5 +23,6 @@ public class Application {
     public static void main (String[] args) {
     	System.out.println ("Starting Application");
 		Application app = new Application();
+		app.greet();
     }
 }
